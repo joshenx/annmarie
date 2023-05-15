@@ -6,9 +6,9 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<!-- <a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
-		</a>
+		</a> -->
 	</div>
 
 	<nav>
@@ -19,8 +19,8 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+			<li aria-current={$page.url.pathname === '/start' ? 'page' : undefined}>
+				<a href="/start">Start</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
 				<a href="/sverdle">Sverdle</a>
@@ -32,7 +32,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/joshenx/annmarie">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -58,6 +58,7 @@
 	}
 
 	.corner img {
+		filter: invert(17%) sepia(99%) saturate(4654%) hue-rotate(356deg) brightness(88%) contrast(105%);
 		width: 2em;
 		height: 2em;
 		object-fit: contain;

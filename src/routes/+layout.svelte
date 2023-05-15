@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>there's <a href="/yourelost-unless?id=">no way</a> to enter.</p>
+		<p>there's <a href="/yourelost-unless?id=st4rtm4yb3">no way</a> to enter.</p>
 		<div hidden> replace(/\bno\b/gi, "one")</div>
 	</footer>
 </div>

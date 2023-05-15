@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About</title>
+	<title>Start</title>
 	<meta name="description" content="please, there's not much time left." />
 </svelte:head>
 

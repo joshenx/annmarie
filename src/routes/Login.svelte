@@ -1,46 +1,41 @@
 <script lang='ts'>
+	import { myUsername, myPassword } from '../diary.ts';
 	let username = '';
 	let password = '';
   
 	async function handleSubmit() {
-	  // Perform login logic here, e.g., make an API call
-	  try {
-		const response = await fetch('/api/login', {
-		  method: 'POST',
-		  headers: {
-			'Content-Type': 'application/json'
-		  },
-		  body: JSON.stringify({ username, password })
-		});
-  
-		if (response.ok) {
-		  // Successful login
-		  alert('Login successful!');
+		const validUsername = myUsername; // Replace with your desired valid username
+		const validPassword = myPassword; // Replace with your desired valid password
+
+		if (username === validUsername && password === validPassword) {
+			// Successful login
+			alert('Login successful!');
 		} else {
-		  // Failed login
-		  alert('Login failed!');
+			// Failed login
+			alert('Invalid username or password!');
 		}
-	  } catch (error) {
-		console.error('An error occurred:', error);
-	  }
-	}
+
+		// Clear the entered values
+		username = '';
+		password = '';
+  	}
 </script>
   
 <div class="login">
 	<h1>Login</h1>
-  
+
 	<form on:submit|preventDefault={handleSubmit}>
-	  <label>
+		<label for="username">
 		Username:
-		<input type="text" bind:value={username} />
-	  </label>
-  
-	  <label>
+		<input id="username" type="text" bind:value={username} autocomplete="off" />
+		</label>
+
+		<label for="password">
 		Password:
-		<input type="password" bind:value={password} />
-	  </label>
-  
-	  <button type="submit">Login</button>
+		<input id="password" type="password" bind:value={password} autocomplete="off" />
+		</label>
+
+		<button type="submit">Login</button>
 	</form>
 </div>
   

@@ -1,11 +1,11 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--font-body: serif;
+	--font-body: 'Georgia', serif;
 	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
+	--color-bg-0: rgb(208, 196, 160);
+	--color-bg-1: hsl(28, 36%, 86%);
+	--color-bg-2: hsl(32, 44%, 95%);
 	--color-theme-1: #e60606;
 	--color-theme-2: #4075a6;
 	--color-text: rgba(0, 0, 0, 0.7);
@@ -26,7 +26,7 @@ body {
 			rgba(255, 255, 255, 0.75) 0%,
 			rgba(255, 255, 255, 0) 100%
 		),
-		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 50%, var(--color-bg-2) 100%);
 }
 
 h1,
