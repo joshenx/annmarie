@@ -1,26 +1,31 @@
 <svelte:head>
 	<title>About</title>
-	<meta name="description" content="About this app" />
+	<meta name="description" content="please, there's not much time left." />
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
+	<h1>start .</h1>
+	<div class="riddle">
+		In the realm of code and digital creation,<br>
+		A secret lies, waiting for revelation.<br>
+		Seek the password in a virtual lair,<br>
+		Within a repository, hidden with care.<br><br>
+		<hr>
+		A folder, a book holds the key,<br>
+		Where secrets dwell for all to see.<br>
+		In a developer's domain, your quest begins,<br>
+		Uncover the password and claim your wins.<br>
+	</div>
 </div>
+
+<style>
+	hr {
+		border-bottom: 2px #dddddd;
+		margin-bottom: 1rem;
+		width: 40%;
+	}
+
+	.riddle {
+		line-height: 150%;
+	}
+</style>

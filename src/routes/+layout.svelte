@@ -11,7 +11,8 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>there's <a href="/yourelost-unless?id=">no way</a> to enter.</p>
+		<div hidden> replace(/\bno\b/gi, "one")</div>
 	</footer>
 </div>
 

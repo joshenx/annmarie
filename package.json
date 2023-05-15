@@ -33,5 +33,12 @@
 		"vite": "^4.3.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@svelteuidev/composables": "^0.11.1",
+		"@svelteuidev/core": "^0.11.1",
+		"@svelteuidev/dates": "^0.11.1",
+		"@svelteuidev/motion": "^0.11.1",
+		"dayjs": "^1.11.7"
+	}
 }
