@@ -2,6 +2,7 @@
 	import Counter from './Counter.svelte';
 	import Login from './Login.svelte';
 	import annmarie from '$lib/images/annmarie.png';
+	import MouseCursor from './MouseCursor.svelte';
 </script>
 
 <svelte:head>
@@ -17,11 +18,16 @@
 	</h1>
 
 	<h2>
-		look for clues.
+		Start your journey, with a simple click,<br>
+		On the tab that beckons, quick and slick.<br><br>
+		Use my key to gain access,<br>
+		No need for your credentials to impress.
 	</h2>
-
+	<hr>
 	<Login />
 </section>
+
+<MouseCursor />
 
 <style>
 	section {
@@ -36,12 +42,15 @@
 		width: 100%;
 	}
 
+	h2 {
+		text-align: center;
+	}
 
 	img {
 		display: block;
 		margin-left: auto;
  		margin-right: auto;
-		width: max(20vw, 400px);
+		width: max(15vw, 300px);
 		height: 30%;
 		margin-bottom: 2rem;
 	}

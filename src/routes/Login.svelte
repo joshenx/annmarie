@@ -9,10 +9,10 @@
 
 		if (username === validUsername && password === validPassword) {
 			// Successful login
-			alert('Login successful!');
+			//setTimeout(() => {alert('Your offering is accepted.');}, 1);
 		} else {
 			// Failed login
-			alert('Invalid username or password!');
+			//setTimeout(() => {alert('That\'s not quite it..');}, 1);
 		}
 
 		// Clear the entered values
@@ -22,8 +22,6 @@
 </script>
   
 <div class="login">
-	<h1>Login</h1>
-
 	<form on:submit|preventDefault={handleSubmit}>
 		<label for="username">
 		Username:

@@ -19,12 +19,6 @@
 </div>
 
 <style>
-	hr {
-		border-bottom: 2px #dddddd;
-		margin-bottom: 1rem;
-		width: 40%;
-	}
-
 	.riddle {
 		line-height: 150%;
 	}

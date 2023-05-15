@@ -20,7 +20,7 @@
 				<a href="/">Home</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/start' ? 'page' : undefined}>
-				<a href="/start">Start</a>
+				<a class="startbutton" href="/start">Start</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
 				<a href="/sverdle">Sverdle</a>
@@ -32,7 +32,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/joshenx/annmarie">
+		<a href="https://github.com/joshenx/annmarie" target="_blank" rel="noopener noreferrer">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -42,6 +42,11 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.startbutton {
+		font-size: 1.5rem;
+		margin: 0rem 0.5rem;
 	}
 
 	.corner {

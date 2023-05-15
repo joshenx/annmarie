@@ -55,6 +55,13 @@ h1 {
 
 h2 {
 	font-size: 1rem;
+	line-height: 1.5;
+}
+
+hr {
+	border-bottom: 2px #dddddd;
+	margin-bottom: 2rem;
+	width: 40%;
 }
 
 pre {
