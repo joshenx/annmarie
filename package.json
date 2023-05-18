@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^3.0.0",
 		"@svelteuidev/composables": "^0.11.1",
 		"@svelteuidev/core": "^0.11.1",
 		"@svelteuidev/dates": "^0.11.1",
