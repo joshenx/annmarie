@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>there's <a href="/yourelost-unless?id=PLESE_PRES_START_BEFORE_ITS_TOO_LATE_TIMES_RUNNING_OUT">no way</a> to enter.</p>
+		<p>there's <a href="/COCLUELOUR">no way</a> to enter.</p>
 		<div hidden> replace(/\bno\b/gi, "one")</div>
 	</footer>
 </div>
