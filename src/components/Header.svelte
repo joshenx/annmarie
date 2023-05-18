@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
+	import { status } from '$lib/stores/ProgressStore.ts';
 	import github from '$lib/images/github.svg';
 </script>
 
@@ -19,11 +19,17 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/start' ? 'page' : undefined}>
-				<a class="startbutton" href="/start">Start</a>
+			{#if $status.isLoggedIn}
+			<li aria-current={$page.url.pathname === '/game' ? 'page' : undefined}>
+				<a class="mainbutton" href="/game">Continue</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
+			{:else}
+			<li aria-current={$page.url.pathname === '/game' ? 'page' : undefined}>
+				<a class="mainbutton" href="/game">Start</a>
+			</li>
+			{/if}
+			<li aria-current={$page.url.pathname.startsWith('/status') ? 'page' : undefined}>
+				<a href="/status">Status</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -44,7 +50,7 @@
 		justify-content: space-between;
 	}
 
-	.startbutton {
+	.mainbutton {
 		font-size: 1.5rem;
 		margin: 0rem 0.5rem;
 	}

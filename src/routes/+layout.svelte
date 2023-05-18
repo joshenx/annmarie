@@ -1,6 +1,7 @@
 <script>
-	import Header from './Header.svelte';
+	import Header from '../components/Header.svelte';
 	import './styles.css';
+	import { status } from '$lib/stores/ProgressStore';
 </script>
 
 <div class="app">
@@ -10,10 +11,20 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>there's <a href="/COCLUELOUR">no way</a> to enter.</p>
-		<div hidden> replace(/\bno\b/gi, "one")</div>
-	</footer>
+	{#if $status.stage == 0}
+		<footer>
+			<p>inspect <a href="/COCLUELOUR">this.</a> clue.</p>
+			<div hidden>
+				I've always loved writing down notes in my diary.
+				Sometimes, I may even keep my personal details in there,
+				in case I ever forget. I'll even keep track of what version
+				it is, so I can look at my old passwords and see how strict
+				the password rules become over time! If only there was a way
+				to store them digitally..
+			</div>
+		</footer>
+	{/if}
+	
 </div>
 
 <style>

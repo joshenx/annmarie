@@ -1,8 +1,8 @@
 <script>
-	import Counter from './Counter.svelte';
-	import Login from './Login.svelte';
+	import Login from '../components/Login.svelte';
 	import annmarie from '$lib/images/annmarie.png';
-	import MouseCursor from './MouseCursor.svelte';
+	import MouseCursor from '../components/MouseCursor.svelte';
+	import { status } from '$lib/stores/ProgressStore.ts';
 </script>
 
 <svelte:head>
@@ -14,7 +14,7 @@
 	<h1 class="welcome">
 		<img src={annmarie} alt="hey" />
 
-		hi, I'm Ann Marie.<br />And I'm trapped.
+		i'm Ann Marie.<br />And I'm trapped.
 	</h1>
 
 	<h2>
@@ -24,7 +24,20 @@
 		No need for your credentials to impress.
 	</h2>
 	<hr>
-	<Login />
+
+	{#if !$status.isLoggedIn}
+		{#if $status.isDisplayErrorMessage}
+			<div class="error">{$status.errorMessage}</div>
+		{/if}
+		<Login />
+	{:else}
+		<h1>
+			you've found it!
+		</h1>
+		<h2>
+			hurry, there's not much time left.
+		</h2>
+	{/if}
 </section>
 
 <MouseCursor />
@@ -53,5 +66,10 @@
 		width: max(15vw, 300px);
 		height: 30%;
 		margin-bottom: 2rem;
+		pointer-events: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
 	}
+
 </style>

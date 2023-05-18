@@ -1,8 +1,3 @@
-<svelte:head>
-	<title>Start</title>
-	<meta name="description" content="please, there's not much time left." />
-</svelte:head>
-
 <div class="text-column">
 	<h1>start .</h1>
 	<div class="riddle">

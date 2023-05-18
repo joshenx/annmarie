@@ -31,9 +31,6 @@
 	on:mouseup={(e) => {
 		size.set(10);
 	}}
-    on:scroll={(e) => {
-        console.log(e);
-    }}
 />
 
 <svg
