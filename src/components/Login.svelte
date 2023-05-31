@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import { myUsername, myPassword } from '../diary.ts';
-	import { status } from '$lib/stores/ProgressStore.ts';
+	import ProgressStore from '$lib/stores/ProgressStore.ts';
 	let username = '';
 	let password = '';
   
@@ -9,15 +9,11 @@
 		const validPassword = myPassword; // Replace with your desired valid password
 
 		if (username === validUsername && password === validPassword) {
-			status.set({
-				isLoggedIn: true,
-				stage: 1
-			});
+			ProgressStore.registerLogin();
+			ProgressStore.setStage(1);
+			ProgressStore.hideLoginError();
 		} else {
-			status.set({
-				isDisplayErrorMessage: true,
-				errorMessage: "that's not quite it.."
-			});
+			ProgressStore.displayLoginError();
 		}
 
 		// Clear the entered values

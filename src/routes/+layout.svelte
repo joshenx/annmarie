@@ -1,7 +1,9 @@
 <script>
 	import Header from '../components/Header.svelte';
 	import './styles.css';
-	import { status } from '$lib/stores/ProgressStore';
+	import ProgressStore from '$lib/stores/ProgressStore';
+
+	$: ({stage} = $ProgressStore);
 </script>
 
 <div class="app">
@@ -11,7 +13,7 @@
 		<slot />
 	</main>
 
-	{#if $status.stage == 0}
+	{#if stage == 0}
 		<footer>
 			<p>inspect <a href="/COCLUELOUR">this.</a> clue.</p>
 			<div hidden>

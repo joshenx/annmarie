@@ -2,7 +2,9 @@
 	import Login from '../components/Login.svelte';
 	import annmarie from '$lib/images/annmarie.png';
 	import MouseCursor from '../components/MouseCursor.svelte';
-	import { status } from '$lib/stores/ProgressStore.ts';
+	import ProgressStore from '$lib/stores/ProgressStore.ts';
+
+	$: ({isLoggedIn, displayErrorMessage, errorMessage} = $ProgressStore);
 </script>
 
 <svelte:head>
@@ -25,9 +27,9 @@
 	</h2>
 	<hr>
 
-	{#if !$status.isLoggedIn}
-		{#if $status.isDisplayErrorMessage}
-			<div class="error">{$status.errorMessage}</div>
+	{#if !isLoggedIn}
+		{#if displayErrorMessage}
+			<div class="error">{errorMessage}</div>
 		{/if}
 		<Login />
 	{:else}

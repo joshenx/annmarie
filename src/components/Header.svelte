@@ -1,7 +1,9 @@
 <script>
 	import { page } from '$app/stores';
-	import { status } from '$lib/stores/ProgressStore.ts';
+	import ProgressStore from '$lib/stores/ProgressStore.ts';
 	import github from '$lib/images/github.svg';
+
+	$: ({isLoggedIn} = $ProgressStore);
 </script>
 
 <header>
@@ -19,7 +21,7 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
-			{#if $status.isLoggedIn}
+			{#if isLoggedIn}
 			<li aria-current={$page.url.pathname === '/game' ? 'page' : undefined}>
 				<a class="mainbutton" href="/game">Continue</a>
 			</li>
